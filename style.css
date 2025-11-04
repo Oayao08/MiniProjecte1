@@ -1,140 +1,167 @@
-/* === Estilo general tipo Wikipedia === */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- Estilos generales --- */
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #fff;
-  color: #202122;
-  line-height: 1.6;
-  margin: 0;
-  padding: 0 15%;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #222;
+    line-height: 1.6;
+    padding: 1rem;
 }
 
-/* Encabezado principal */
-header {
-  border-bottom: 1px solid #a2a9b1;
-  padding-bottom: 0.3em;
-  margin-bottom: 1.2em;
+/* --- Navegador principal --- */
+.navegador {
+    background-color: #001f3f;
+    padding: 0.5rem 1rem;
+    border-radius: 10px;
+    margin-bottom: 2rem;
 }
 
-h1, h2, h3 {
-  font-family: "Arial", "Georgia", serif;
-  color: #202122;
-  border-bottom: 1px solid #a2a9b1;
-  padding: 0.2em;
+.navegador ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navegador ul li {
+    position: relative;
+    margin-right: 1rem;
+}
+
+.navegador ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    display: block;
+    transition: background 0.3s ease;
+}
+
+.navegador ul li a:hover {
+    background-color: #0055aa;
+    border-radius: 5px;
+}
+
+/* Submenús */
+.navegador ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #002b5c;
+    border-radius: 5px;
+    padding: 0.5rem 0;
+    top: 100%;
+    left: 0;
+    min-width: 180px;
+    z-index: 10;
+}
+
+.navegador ul li:hover ul {
+    display: block;
+}
+
+.navegador ul li ul li {
+    margin: 0;
+}
+
+.navegador ul li ul li a {
+    font-weight: normal;
+}
+
+/* --- Encabezados --- */
+h1, h2, h3, h4, h5 {
+    color: #0b2e5b;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
 }
 
 h1 {
-  font-size: 1.8em;
+    font-size: 2.5rem;
+    text-align: center;
 }
 
 h2 {
-  font-size: 1.4em;
+    border-bottom: 2px solid #0b2e5b;
+    padding-bottom: 0.3rem;
 }
 
-/* Párrafos y listas */
-p, ul, ol {
-  font-size: 0.95em;
-  margin-bottom: 1em;
-  list-style: none;
-}
-
-/* Enlaces */
+/* --- Enlaces --- */
 a {
-  color: #0645ad;
-  text-decoration: none;
+    color: #0066cc;
 }
 
-/* Imágenes */
+a:hover {
+    color: #004080;
+    text-decoration: underline;
+}
+
+/* --- Imágenes y pies de foto --- */
 img {
-  max-width: 100%;
-  height: auto;
-  border: 1px solid #a2a9b1;
-  background-color: #f8f9fa;
-  padding: 2px;
+    display: block;
+    margin: 1rem auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
 }
 
-/* Secciones tipo artículo */
-main {
-  background-color: #fff;
-  padding: 20px;
-  border: 1px solid #a2a9b1;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+small {
+    display: block;
+    text-align: center;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 1rem;
 }
 
-article {
-  margin-bottom: 2em;
-}
-
-/* Citas o referencias */
-cite {
-  font-style: normal;
-  color: #54595d;
-}
-
-th, td {
-  border: 1px solid #a2a9b1;
-  padding: 0.4em 0.6em;
-}
-
-th {
-  background-color: #f8f9fa;
-}
-
-/* Navegación o enlaces superiores */
-nav {
-  background-color: #f8f9fa;
-  border: 1px solid #a2a9b1;
-  padding: 0.5em;
-  margin-bottom: 1em;
-}
-
-nav a {
-  margin-right: 10px;
-  color: #0645ad;
-}
-
-/* Pie de página */
-footer {
-  border-top: 1px solid #a2a9b1;
-  margin-top: 2em;
-  padding-top: 1em;
-  font-size: 0.85em;
-  color: #54595d;
-  text-align: center;
-}
-
-/*Contenedor información jugador*/
-.jugador {
+/* --- Sección de información personal --- */
+#Informacion {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: #e8eef7;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
 }
 
-.texto {
-    flex: 2;
+#Informacion div {
+    width: 30%;
+    min-width: 250px;
+    background-color: white;
+    padding: 1rem;
+    margin: 0.5rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 }
 
-.ficha{
-    flex: 1;
-    background-color: #f8f9fa;
-    border: 1px solid #a2a9b2;
-    padding: 10px;
-    font-size: 14px;
-    line-height: 1.5;
+/* --- Párrafos --- */
+p {
+    margin-bottom: 1rem;
+    text-align: justify;
 }
 
-.ficha h2 {
-  font-size: 16px;
-  margin-top: 10px;
-  border-bottom: 1px solid #a2a9b1;
-  padding-bottom: 3px;
-  color: #202122;
+/* --- Línea divisoria --- */
+hr {
+    margin: 1rem 0;
+    border: none;
+    border-top: 2px solid #ccc;
 }
 
-.ficha p {
-  margin: 4px 0;
-}
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .navegador ul {
+        flex-direction: column;
+    }
 
-.ficha strong {
-  color: #202122;
+    #Informacion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #Informacion div {
+        width: 90%;
+    }
 }
