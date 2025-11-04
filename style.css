@@ -1,0 +1,140 @@
+/* === Estilo general tipo Wikipedia === */
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  color: #202122;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0 15%;
+}
+
+/* Encabezado principal */
+header {
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 0.3em;
+  margin-bottom: 1.2em;
+}
+
+h1, h2, h3 {
+  font-family: "Arial", "Georgia", serif;
+  color: #202122;
+  border-bottom: 1px solid #a2a9b1;
+  padding: 0.2em;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+/* Párrafos y listas */
+p, ul, ol {
+  font-size: 0.95em;
+  margin-bottom: 1em;
+  list-style: none;
+}
+
+/* Enlaces */
+a {
+  color: #0645ad;
+  text-decoration: none;
+}
+
+/* Imágenes */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #a2a9b1;
+  background-color: #f8f9fa;
+  padding: 2px;
+}
+
+/* Secciones tipo artículo */
+main {
+  background-color: #fff;
+  padding: 20px;
+  border: 1px solid #a2a9b1;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+article {
+  margin-bottom: 2em;
+}
+
+/* Citas o referencias */
+cite {
+  font-style: normal;
+  color: #54595d;
+}
+
+th, td {
+  border: 1px solid #a2a9b1;
+  padding: 0.4em 0.6em;
+}
+
+th {
+  background-color: #f8f9fa;
+}
+
+/* Navegación o enlaces superiores */
+nav {
+  background-color: #f8f9fa;
+  border: 1px solid #a2a9b1;
+  padding: 0.5em;
+  margin-bottom: 1em;
+}
+
+nav a {
+  margin-right: 10px;
+  color: #0645ad;
+}
+
+/* Pie de página */
+footer {
+  border-top: 1px solid #a2a9b1;
+  margin-top: 2em;
+  padding-top: 1em;
+  font-size: 0.85em;
+  color: #54595d;
+  text-align: center;
+}
+
+/*Contenedor información jugador*/
+.jugador {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.texto {
+    flex: 2;
+}
+
+.ficha{
+    flex: 1;
+    background-color: #f8f9fa;
+    border: 1px solid #a2a9b2;
+    padding: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.ficha h2 {
+  font-size: 16px;
+  margin-top: 10px;
+  border-bottom: 1px solid #a2a9b1;
+  padding-bottom: 3px;
+  color: #202122;
+}
+
+.ficha p {
+  margin: 4px 0;
+}
+
+.ficha strong {
+  color: #202122;
+}
